@@ -1,0 +1,11 @@
+.event
+  .event__header
+    .event__title
+      | #{ @user.email }
+
+    .group-buttons
+      .group-buttons__but
+        = link_to edit_user_path(params[:id], @event) do
+          =image_tag 'edit.svg'
+      .group-buttons__but
+        = link_to 'New event', new_event_path, class: 'button'

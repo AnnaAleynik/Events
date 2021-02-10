@@ -1,0 +1,14 @@
+h2 
+  ' All events
+ul.events-list
+  -@events.each do |event|
+    li.events-list__item
+      = link_to event.title, event_path(event)
+      = @event.date  
+      .events-list__icons
+      = link_to edit_event_path(event), class: 'events-list__icon' do
+          = image_tag 'edit.svg'
+      = link_to event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, id: 'delete-event', class: 'events-list__icon' do
+        = image_tag 'delete.svg'
+
+= link_to 'New event', new_event_path, class: 'button'

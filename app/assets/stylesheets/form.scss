@@ -1,0 +1,23 @@
+@import 'variables';
+
+.form-new {
+  &__field {
+    margin: 5px;
+
+    input {
+      max-width: 500px;
+    }
+  }
+
+  &__area {
+    margin: 5px;
+
+    input {
+      max-width: 500px;
+    }
+  }
+
+  &__button {
+    margin: 5px;
+  }
+}

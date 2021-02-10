@@ -1,0 +1,15 @@
+.event
+  .event__header
+    .event__title
+      | event: #{ @event.title }
+
+    .group-buttons
+      .group-buttons__but
+        = link_to edit_event_path(params[:card_id], @event) do
+          =image_tag 'edit.svg'
+      .group-buttons__but
+        = link_to event_path(params[:card_id], @event), method: :delete, data: { confirm: 'Are you sure?' } do
+          =image_tag 'delete.svg'
+  = @event.date
+  .event__description
+    = @event.description
